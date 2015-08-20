@@ -1,0 +1,40 @@
+{
+  "name": "http-five-o",
+  "description": "Express-based static HTTP server with basic auth.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/blech75/http-five-o",
+  "author": {
+    "name": "Justin Blecher",
+    "email": "justin@worksperfectly.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/blech75/http-five-o"
+  },
+  "bugs": {
+    "url": "https://github.com/blech75/http-five-o/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/blech75/http-five-o/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "./bin/http5o.js",
+  "bin": {
+    "http5o" : "./bin/http5o.js"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.5"
+  },
+  "dependencies": {
+    "basic-auth": "^1.0.3",
+    "express": "^4.13.3"
+  },
+  "keywords": []
+}
