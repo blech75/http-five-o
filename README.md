@@ -35,6 +35,8 @@ $ npm install -g http-five-o
 
 ## Usage
 
+**http-five-o** can be used in any combination of ways below.
+
 ### Global Usage
 
 When installed as a global utility, you can call it from your shell like so:
@@ -62,7 +64,7 @@ If you did not install it as a global utility, but would like to use it to serve
 Notice the configuration set via environment variables. See [Configuration Options](#configuration-options) below for more details.
 
 
-### Via npm scripts & `heroku local`
+### Via npm scripts & `heroku local` (`forego`)
 
 Modify your package.json similar to above, but instead of calling http5o directly, call [`heroku local`](https://devcenter.heroku.com/articles/heroku-local):
 
@@ -83,11 +85,13 @@ DISABLE_HTTP_AUTH=true
 DOCROOT=src
 ```
 
-**WARNING:** Be sure to add .env to your .gitignore file.
+**WARNING:** Be sure to add `.env` to your `.gitignore` file.
 
-**NOTE:** Going this route requires that you have `http5o` installed globally. This is because Heroku uses Foreman/Forego to run `http5o`, which is not aware of the local npm executable path.
+**NOTE:** If you're not a fan of Heroku or don't have their [toolbelt](https://toolbelt.heroku.com) installed, you can still benefit from the `.env` file and `Procfile` combo by using [Forego](https://github.com/ddollar/forego). In this case, you'd configure the `start` script to run `forego start`.
 
-**NOTE:** Going this route also means you delegate the port selection to Foreman/Forgo, which is usually port 5000 (unless you set it via `.env`).
+**NOTE:** Going this route requires that you have `http5o` installed globally. This is because the [Heroku Toolbelt](https://toolbelt.heroku.com) uses [Forego](https://github.com/ddollar/forego) to run `http5o`, which is not aware of the local npm executable path (`$PROJECT_ROOT/node_modules/.bin/`).
+
+**NOTE:** Going this route also means you delegate the port selection to [Forego](https://github.com/ddollar/forego), which starts at port 5000 (unless you set it via `.env`).
 
 
 ### Deploying to Heroku
@@ -101,7 +105,7 @@ Then [set the appropriate config variables for your Heroku app](https://devcente
 
 ## Configuration Options
 
-`http5o` is controlled by environment variables in the shell that launches it.
+You can configure `http5o` by setting environment variables in the shell (or command line) that launches it. Here are the variables that control `http5o`:
 
 * `HTTP_USERNAME` (default value: `http5o`)
 * `HTTP_PASSWORD` (default value: `protectandserve`)
@@ -111,13 +115,11 @@ Then [set the appropriate config variables for your Heroku app](https://devcente
 * `PORT` (default value: `5000`)
 * `DISABLE_HTTP_AUTH` (default value: empty/`false`)
 
-The primary use case is being managed by `heroku local`, which uses a  `Procfile` and a
 
-In order to do this, you need to install the module globally so it's available in your `$PATH`.
+## TODO
 
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+* Implement command line arguments in addition to env vars.
+* Refactor code to allow exposure as node module.
 
 
 ## Release History
