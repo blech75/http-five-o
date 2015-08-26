@@ -18,7 +18,7 @@ var PASSWORD = process.env['HTTP_PASSWORD'] || 'protectandserve';
 var REALM    = process.env['HTTP_REALM'] || 'Authorization Required';
 var DOCROOT  = process.env['DOCROOT'] || '.';
 var INDEX    = process.env['INDEX_FILE'] || 'index.html';
-var PORT     = process.env['PORT'] || 3000;
+var PORT     = process.env['PORT'] || 5000;
 var DISABLE_HTTP_AUTH = process.env['DISABLE_HTTP_AUTH'];
 
 var docroot_path = process.env['PWD'] + '/' + DOCROOT;

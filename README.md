@@ -108,7 +108,7 @@ Then [set the appropriate config variables for your Heroku app](https://devcente
 * `HTTP_REALM` (default value: `Authorization Required`)
 * `DOCROOT` (default value: `.`)
 * `INDEX_FILE` (default value: `index.html`)
-* `PORT` (default value: `3000`)
+* `PORT` (default value: `5000`)
 * `DISABLE_HTTP_AUTH` (default value: empty/`false`)
 
 The primary use case is being managed by `heroku local`, which uses a  `Procfile` and a
