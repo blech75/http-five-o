@@ -36,5 +36,12 @@
     "basic-auth": "^1.0.3",
     "express": "^4.13.3"
   },
-  "keywords": []
+  "keywords": [
+    "http",
+    "web",
+    "server",
+    "static",
+    "auth",
+    "authentication"
+  ]
 }
