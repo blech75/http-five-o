@@ -43,7 +43,7 @@ When installed as a global utility, you can call it from your shell like so:
 $ http5o
 ```
 
-By default it will serve the current directory. See [Configuration Options](#ConfigurationOptions) below for more details.
+By default it will serve the current directory. See [Configuration Options](#configuration-options) below for more details.
 
 ### Via npm scripts
 
@@ -59,7 +59,7 @@ If you did not install it as a global utility, but would like to use it to serve
 }
 ```
 
-Notice the configuration set via environment variables. See [Configuration Options](#ConfigurationOptions) below for more details.
+Notice the configuration set via environment variables. See [Configuration Options](#configuration-options) below for more details.
 
 
 ### Via npm scripts & `heroku local`
@@ -76,7 +76,7 @@ Modify your package.json similar to above, but instead of calling http5o directl
 }
 ```
 
-Then, create a [`.env`](https://devcenter.heroku.com/articles/heroku-local#add-a-config-var-to-your-env-file) file in your project to store any desired [configuration](#ConfigurationOptions):
+Then, create a [`.env`](https://devcenter.heroku.com/articles/heroku-local#add-a-config-var-to-your-env-file) file in your project to store any desired [configuration](#configuration-options):
 
 ```
 DISABLE_HTTP_AUTH=true
